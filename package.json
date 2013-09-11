@@ -1,0 +1,20 @@
+{
+  "name": "angularjs.org-healthchecks",
+  "version": "0.0.0",
+  "description": "Tests to verify that angularjs.org sites are alive, not necessarily well.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jeffbcross/angularjs.org-healthchecks"
+  },
+  "author": "jeffbcross",
+  "license": "MIT",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "request": "~2.27.0",
+    "grunt-jasmine-node": "~0.1.0"
+  }
+}
