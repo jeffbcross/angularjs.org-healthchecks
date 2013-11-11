@@ -40,7 +40,7 @@ describe('errors.angularjs.org', function () {
       expect(res.statusCode).toBe(301);
       done();
     });
-  });
+  }, 10000);
 
   it('should be online', function (done) {
     request('http://docs.angularjs.org', function (err, res, body) {
@@ -49,7 +49,7 @@ describe('errors.angularjs.org', function () {
       expect(body).toContain('AngularJS is what HTML would have been');
       done();
     });
-  });
+  }, 10000);
 });
 
 describe('dashboard.angularjs.org', function () {
@@ -60,7 +60,7 @@ describe('dashboard.angularjs.org', function () {
       expect(body).toContain('ng-app');
       done();
     });
-  });
+  }, 10000);
 });
 
 describe('builtwith.angularjs.org', function () {
@@ -71,7 +71,7 @@ describe('builtwith.angularjs.org', function () {
       expect(body).toContain('ng-controller');
       done();
     });
-  });
+  }, 10000);
 });
 
 describe('code.angularjs.org', function () {
