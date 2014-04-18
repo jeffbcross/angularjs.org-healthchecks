@@ -35,7 +35,7 @@ describe('docs.angularjs.org', function () {
 
 describe('errors.angularjs.org', function () {
   it('should redirect', function (done) {
-    request({followRedirect: false, url: 'http://errors.angularjs.org'}, function (err, res, body) {
+    request({followRedirect: false, url: 'https://errors.angularjs.org'}, function (err, res, body) {
       expect(res.headers.location).toContain('docs.angularjs.org/error');
       expect(res.statusCode).toBe(301);
       done();
