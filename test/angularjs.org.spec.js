@@ -84,3 +84,23 @@ describe('code.angularjs.org', function () {
     });
   });
 });
+
+describe('material.angularjs.org', function () {
+  it('should be online', function (done) {
+    request('https://material.angularjs.org', function (err, res, body) {
+      expect(!err).toBe(true);
+      expect(res.statusCode).toBe(200);
+      expect(body).toContain('ng-app');
+      done();
+    });
+  });
+
+  it('should build docs.js', function (done) {
+    request('https://material.angularjs.org/docs.js', function (err, res, body) {
+      expect(!err).toBe(true);
+      expect(res.statusCode).toBe(200);
+      expect(body).toContain('angular.module');
+      done();
+    });
+  });
+});
